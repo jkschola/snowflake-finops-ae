@@ -25,3 +25,25 @@ GRANT ALL ON DATABASE FINOPS_PROD TO ROLE FINOPS_TRANSFORMER_ROLE;
 -- The Gold Mine: Accessing Snowflake's own usage data
 USE ROLE ACCOUNTADMIN;
 GRANT IMPORTED PRIVILEGES ON DATABASE SNOWFLAKE TO ROLE FINOPS_TRANSFORMER_ROLE;
+
+/********************************************************************************
+  GRANT ROLE TO THE CURRENT USER
+  This ensures the person running the script can actually switch to the role
+********************************************************************************/
+USE ROLE SECURITYADMIN;
+
+-- We use CURRENT_USER() to dynamically grant the role to whoever runs this script
+SET MY_USER_VAR = CURRENT_USER();
+GRANT ROLE FINOPS_TRANSFORMER_ROLE TO USER IDENTIFIER($MY_USER_VAR);
+
+/********************************************************************************
+  GRANT PERMISSIONS TO SYSADMIN (Role Hierarchy)
+  Ensures that standard admin roles can see the work of the transformer role
+********************************************************************************/
+USE ROLE ACCOUNTADMIN;
+GRANT USAGE ON DATABASE FINOPS_DEV TO ROLE SYSADMIN;
+GRANT USAGE ON SCHEMA FINOPS_DEV.DBT_YourName TO ROLE SYSADMIN; -- Replace with your schema if different
+GRANT SELECT ON ALL TABLES IN SCHEMA FINOPS_DEV.DBT_YourName TO ROLE SYSADMIN;
+GRANT SELECT ON ALL VIEWS IN SCHEMA FINOPS_DEV.DBT_YourName TO ROLE SYSADMIN;
+GRANT SELECT ON FUTURE TABLES IN SCHEMA FINOPS_DEV.DBT_YourName TO ROLE SYSADMIN;
+GRANT SELECT ON FUTURE VIEWS IN SCHEMA FINOPS_DEV.DBT_YourName TO ROLE SYSADMIN;
