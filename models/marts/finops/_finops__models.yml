@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_daily_warehouse_costs
+    description: "Daily Snowflake credit consumption and estimated cost in EUR per warehouse."
+    columns:
+      - name: daily_warehouse_id
+        description: "Primary key: MD5 hash of cost_date and warehouse_name."
+        tests:
+          - unique
+          - not_null
+      - name: cost_eur
+        description: "Estimated cost in Euros (€)."
+        tests:
+          - not_null

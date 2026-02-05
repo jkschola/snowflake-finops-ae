@@ -1581,3 +1581,842 @@ where query_id is null
 [0m15:29:52.673350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024DD9177D40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024DD8AABDA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024DD8AA8410>]}
 [0m15:29:52.674375 [debug] [MainThread]: Flushing usage events
 [0m15:29:53.367262 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:49:21.232705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D03C8A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D08835C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6CE101B80>]}
+
+
+============================== 15:49:21.232705 | 0e1eaf2c-8f44-484b-b471-91df03472f01 ==============================
+[0m15:49:21.232705 [info ] [MainThread]: Running with dbt=1.11.2
+[0m15:49:21.232705 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\jksch\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt build', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\jksch\\Documents\\Projects\\dbt_projects\\dbt_snowflake\\snowflake-finops-ae\\logs'}
+[0m15:49:21.729439 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m15:49:21.729439 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m15:49:21.729439 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m15:49:21.942787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0e1eaf2c-8f44-484b-b471-91df03472f01', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D10F4B00>]}
+[0m15:49:22.036516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0e1eaf2c-8f44-484b-b471-91df03472f01', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D0A2A690>]}
+[0m15:49:22.036516 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m15:49:22.434058 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m15:49:22.661571 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:49:22.662569 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:49:22.662569 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:49:22.667400 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.snowflake_finops.intermediate
+- models.snowflake_finops.marts
+[0m15:49:22.708123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0e1eaf2c-8f44-484b-b471-91df03472f01', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D0915A00>]}
+[0m15:49:22.784681 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\manifest.json
+[0m15:49:22.788120 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\semantic_manifest.json
+[0m15:49:22.854366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0e1eaf2c-8f44-484b-b471-91df03472f01', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D384BDA0>]}
+[0m15:49:22.855363 [info ] [MainThread]: Found 1 model, 3 data tests, 2 sources, 522 macros
+[0m15:49:22.858332 [info ] [MainThread]: 
+[0m15:49:22.858332 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:49:22.859532 [info ] [MainThread]: 
+[0m15:49:22.860529 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:49:22.860757 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINOPS_DEV'
+[0m15:49:22.975754 [debug] [ThreadPool]: Using snowflake connection "list_FINOPS_DEV"
+[0m15:49:22.975754 [debug] [ThreadPool]: On list_FINOPS_DEV: show terse schemas in database FINOPS_DEV
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "connection_name": "list_FINOPS_DEV"} */
+[0m15:49:22.975754 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:49:24.567480 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.591 seconds
+[0m15:49:24.570143 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINOPS_DEV_dbt_JKU'
+[0m15:49:24.586455 [debug] [ThreadPool]: Using snowflake connection "list_FINOPS_DEV_dbt_JKU"
+[0m15:49:24.586455 [debug] [ThreadPool]: On list_FINOPS_DEV_dbt_JKU: show objects in FINOPS_DEV.dbt_JKU
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "connection_name": "list_FINOPS_DEV_dbt_JKU"} */;
+[0m15:49:24.587452 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:49:25.933489 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.346 seconds
+[0m15:49:25.934984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0e1eaf2c-8f44-484b-b471-91df03472f01', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D34DF170>]}
+[0m15:49:25.944339 [debug] [Thread-2 (]: Began running node model.snowflake_finops.stg_query_history
+[0m15:49:25.945603 [info ] [Thread-2 (]: 1 of 4 START sql view model dbt_JKU.stg_query_history .......................... [RUN]
+[0m15:49:25.945603 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.snowflake_finops.stg_query_history'
+[0m15:49:25.945603 [debug] [Thread-2 (]: Began compiling node model.snowflake_finops.stg_query_history
+[0m15:49:25.952474 [debug] [Thread-2 (]: Writing injected SQL for node "model.snowflake_finops.stg_query_history"
+[0m15:49:25.953626 [debug] [Thread-2 (]: Began executing node model.snowflake_finops.stg_query_history
+[0m15:49:25.987234 [debug] [Thread-2 (]: Writing runtime sql for node "model.snowflake_finops.stg_query_history"
+[0m15:49:25.988232 [debug] [Thread-2 (]: Using snowflake connection "model.snowflake_finops.stg_query_history"
+[0m15:49:25.989229 [debug] [Thread-2 (]: On model.snowflake_finops.stg_query_history: create or replace   view FINOPS_DEV.dbt_JKU.stg_query_history
+  
+  
+  
+  
+  as (
+    
+
+with source as (
+    /* Extracting raw data from the Snowflake shared database */
+    select * from SNOWFLAKE.ACCOUNT_USAGE.query_history
+),
+
+renamed as (
+    select
+        query_id,
+        query_text,
+        database_name,
+        schema_name,
+        warehouse_name,
+        user_name,
+        role_name,
+        -- Normalize to lowercase to match the documentation and tests
+        lower(execution_status) as execution_status,
+        -- Convert milliseconds to seconds for better readability
+        (total_elapsed_time / 1000) as execution_time_s,
+        (compilation_time / 1000) as compilation_time_s,
+        -- Basic credit estimation (using cloud services credits as a proxy)
+        round(credits_used_cloud_services, 4) as credits_spent,
+        start_time,
+        end_time
+    from source
+    -- Development filter: Limit data to the last 30 days for performance
+    where start_time >= dateadd(day, -30, current_timestamp())
+)
+
+select * from renamed
+  )
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "model.snowflake_finops.stg_query_history"} */;
+[0m15:49:25.989229 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:49:27.642234 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.654 seconds
+[0m15:49:27.657856 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e1eaf2c-8f44-484b-b471-91df03472f01', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6CDE20D40>]}
+[0m15:49:27.657856 [info ] [Thread-2 (]: 1 of 4 OK created sql view model dbt_JKU.stg_query_history ..................... [[32mSUCCESS 1[0m in 1.71s]
+[0m15:49:27.657856 [debug] [Thread-2 (]: Finished running node model.snowflake_finops.stg_query_history
+[0m15:49:27.657856 [debug] [Thread-4 (]: Began running node test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c
+[0m15:49:27.657856 [debug] [Thread-5 (]: Began running node test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b
+[0m15:49:27.657856 [debug] [Thread-3 (]: Began running node test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82
+[0m15:49:27.657856 [info ] [Thread-4 (]: 2 of 4 START test accepted_values_stg_query_history_execution_status__success__fail__incident  [RUN]
+[0m15:49:27.657856 [info ] [Thread-5 (]: 3 of 4 START test not_null_stg_query_history_query_id .......................... [RUN]
+[0m15:49:27.673478 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c'
+[0m15:49:27.673478 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b'
+[0m15:49:27.657856 [info ] [Thread-3 (]: 4 of 4 START test unique_stg_query_history_query_id ............................ [RUN]
+[0m15:49:27.675082 [debug] [Thread-4 (]: Began compiling node test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c
+[0m15:49:27.675125 [debug] [Thread-5 (]: Began compiling node test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b
+[0m15:49:27.676063 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82'
+[0m15:49:27.699728 [debug] [Thread-4 (]: Writing injected SQL for node "test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c"
+[0m15:49:27.699728 [debug] [Thread-5 (]: Writing injected SQL for node "test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b"
+[0m15:49:27.699728 [debug] [Thread-3 (]: Began compiling node test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82
+[0m15:49:27.711078 [debug] [Thread-3 (]: Writing injected SQL for node "test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82"
+[0m15:49:27.711078 [debug] [Thread-4 (]: Began executing node test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c
+[0m15:49:27.720631 [debug] [Thread-4 (]: Writing runtime sql for node "test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c"
+[0m15:49:27.720631 [debug] [Thread-5 (]: Began executing node test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b
+[0m15:49:27.720631 [debug] [Thread-5 (]: Writing runtime sql for node "test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b"
+[0m15:49:27.720631 [debug] [Thread-3 (]: Began executing node test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82
+[0m15:49:27.720631 [debug] [Thread-3 (]: Writing runtime sql for node "test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82"
+[0m15:49:27.720631 [debug] [Thread-4 (]: Using snowflake connection "test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c"
+[0m15:49:27.720631 [debug] [Thread-5 (]: Using snowflake connection "test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b"
+[0m15:49:27.720631 [debug] [Thread-4 (]: On test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        execution_status as value_field,
+        count(*) as n_records
+
+    from FINOPS_DEV.dbt_JKU.stg_query_history
+    group by execution_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'success','fail','incident'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c"} */
+[0m15:49:27.736266 [debug] [Thread-5 (]: On test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select query_id
+from FINOPS_DEV.dbt_JKU.stg_query_history
+where query_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b"} */
+[0m15:49:27.736266 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:49:27.736266 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m15:49:27.736266 [debug] [Thread-3 (]: Using snowflake connection "test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82"
+[0m15:49:27.736266 [debug] [Thread-3 (]: On test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    query_id as unique_field,
+    count(*) as n_records
+
+from FINOPS_DEV.dbt_JKU.stg_query_history
+where query_id is not null
+group by query_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82"} */
+[0m15:49:27.736266 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:49:33.182141 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 5.456 seconds
+[0m15:49:33.197492 [info ] [Thread-5 (]: 3 of 4 PASS not_null_stg_query_history_query_id ................................ [[32mPASS[0m in 5.52s]
+[0m15:49:33.197492 [debug] [Thread-5 (]: Finished running node test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b
+[0m15:49:38.386284 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 10.654 seconds
+[0m15:49:38.386284 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 10.654 seconds
+[0m15:49:38.386284 [info ] [Thread-4 (]: 2 of 4 PASS accepted_values_stg_query_history_execution_status__success__fail__incident  [[32mPASS[0m in 10.71s]
+[0m15:49:38.386284 [debug] [Thread-4 (]: Finished running node test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c
+[0m15:49:38.386284 [info ] [Thread-3 (]: 4 of 4 PASS unique_stg_query_history_query_id .................................. [[32mPASS[0m in 10.71s]
+[0m15:49:38.386284 [debug] [Thread-3 (]: Finished running node test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82
+[0m15:49:38.386284 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:49:38.386284 [debug] [MainThread]: Connection 'list_FINOPS_DEV' was left open.
+[0m15:49:38.386284 [debug] [MainThread]: On list_FINOPS_DEV: Close
+[0m15:49:38.800896 [debug] [MainThread]: Connection 'list_FINOPS_DEV_dbt_JKU' was left open.
+[0m15:49:38.800896 [debug] [MainThread]: On list_FINOPS_DEV_dbt_JKU: Close
+[0m15:49:39.248254 [debug] [MainThread]: Connection 'model.snowflake_finops.stg_query_history' was left open.
+[0m15:49:39.248254 [debug] [MainThread]: On model.snowflake_finops.stg_query_history: Close
+[0m15:49:39.620145 [debug] [MainThread]: Connection 'test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c' was left open.
+[0m15:49:39.620145 [debug] [MainThread]: On test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c: Close
+[0m15:49:40.022869 [debug] [MainThread]: Connection 'test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b' was left open.
+[0m15:49:40.022869 [debug] [MainThread]: On test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b: Close
+[0m15:49:40.474345 [debug] [MainThread]: Connection 'test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82' was left open.
+[0m15:49:40.474474 [debug] [MainThread]: On test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82: Close
+[0m15:49:40.862736 [info ] [MainThread]: 
+[0m15:49:40.863244 [info ] [MainThread]: Finished running 3 data tests, 1 view model in 0 hours 0 minutes and 18.00 seconds (18.00s).
+[0m15:49:40.863244 [debug] [MainThread]: Command end result
+[0m15:49:40.885582 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\manifest.json
+[0m15:49:40.890564 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\semantic_manifest.json
+[0m15:49:40.897165 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\run_results.json
+[0m15:49:40.898155 [info ] [MainThread]: 
+[0m15:49:40.899153 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:49:40.899153 [info ] [MainThread]: 
+[0m15:49:40.900297 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m15:49:40.901256 [debug] [MainThread]: Command `dbt build` succeeded at 15:49:40.901256 after 19.78 seconds
+[0m15:49:40.901256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D02EC3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D10DA750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D10DABA0>]}
+[0m15:49:40.901256 [debug] [MainThread]: Flushing usage events
+[0m15:49:41.724035 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:09:07.864878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A40CB9A750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A40C7D6750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A40C7D6810>]}
+
+
+============================== 16:09:07.864878 | 3fe7cc40-8358-4f53-afa9-9fa50e4f89d9 ==============================
+[0m16:09:07.864878 [info ] [MainThread]: Running with dbt=1.9.0
+[0m16:09:07.864878 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\jksch\\.dbt', 'log_path': 'c:\\Users\\jksch\\Documents\\Projects\\dbt_projects\\dbt_snowflake\\snowflake-finops-ae\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt ', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:09:08.510515 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3fe7cc40-8358-4f53-afa9-9fa50e4f89d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A40CC73A50>]}
+[0m16:09:08.545636 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m16:09:08.545636 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m16:09:08.545636 [debug] [MainThread]: Command `cli deps` succeeded at 16:09:08.545636 after 0.79 seconds
+[0m16:09:08.545636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A40CB9A8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A40CB987D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A40CBF2150>]}
+[0m16:09:08.545636 [debug] [MainThread]: Flushing usage events
+[0m16:09:08.927497 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:10:46.923736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029936D55880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029936D54AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299372BD9A0>]}
+
+
+============================== 16:10:46.923736 | daae23b0-588b-4983-92fa-128734ad7829 ==============================
+[0m16:10:46.923736 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:10:46.923736 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\jksch\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\jksch\\Documents\\Projects\\dbt_projects\\dbt_snowflake\\snowflake-finops-ae\\logs'}
+[0m16:10:47.389115 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m16:10:47.389115 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m16:10:47.389115 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m16:10:47.607814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'daae23b0-588b-4983-92fa-128734ad7829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029939C70B90>]}
+[0m16:10:47.701568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'daae23b0-588b-4983-92fa-128734ad7829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029939A2E8D0>]}
+[0m16:10:47.701568 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m16:10:48.128789 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m16:10:48.335253 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 0 files changed.
+[0m16:10:48.336250 [debug] [MainThread]: Partial parsing: added file: snowflake_finops://macros\convert_usd_to_eur.sql
+[0m16:10:48.336250 [debug] [MainThread]: Partial parsing: added file: snowflake_finops://models\marts\finops\_finops__models.yml
+[0m16:10:48.336250 [debug] [MainThread]: Partial parsing: added file: snowflake_finops://models\marts\finops\fct_daily_warehouse_costs.sql
+[0m16:10:48.760310 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.snowflake_finops.intermediate
+[0m16:10:48.773241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'daae23b0-588b-4983-92fa-128734ad7829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002993A2FF410>]}
+[0m16:10:48.845282 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\manifest.json
+[0m16:10:48.845282 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\semantic_manifest.json
+[0m16:10:48.876526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'daae23b0-588b-4983-92fa-128734ad7829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002993535CB90>]}
+[0m16:10:48.876526 [info ] [MainThread]: Found 2 models, 6 data tests, 2 sources, 523 macros
+[0m16:10:48.876526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'daae23b0-588b-4983-92fa-128734ad7829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029939CEE360>]}
+[0m16:10:48.876526 [info ] [MainThread]: 
+[0m16:10:48.876526 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:10:48.876526 [info ] [MainThread]: 
+[0m16:10:48.876526 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m16:10:48.876526 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINOPS_DEV'
+[0m16:10:48.986077 [debug] [ThreadPool]: Using snowflake connection "list_FINOPS_DEV"
+[0m16:10:48.986077 [debug] [ThreadPool]: On list_FINOPS_DEV: show terse schemas in database FINOPS_DEV
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "connection_name": "list_FINOPS_DEV"} */
+[0m16:10:48.987100 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:10:50.407540 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.428 seconds
+[0m16:10:50.407540 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINOPS_DEV_dbt_JKU'
+[0m16:10:50.423145 [debug] [ThreadPool]: Using snowflake connection "list_FINOPS_DEV_dbt_JKU"
+[0m16:10:50.423145 [debug] [ThreadPool]: On list_FINOPS_DEV_dbt_JKU: show objects in FINOPS_DEV.dbt_JKU
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "connection_name": "list_FINOPS_DEV_dbt_JKU"} */;
+[0m16:10:50.423145 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:10:51.346303 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.919 seconds
+[0m16:10:51.348517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'daae23b0-588b-4983-92fa-128734ad7829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002993535CDA0>]}
+[0m16:10:51.355463 [debug] [Thread-2 (]: Began running node model.snowflake_finops.stg_query_history
+[0m16:10:51.356460 [info ] [Thread-2 (]: 1 of 2 START sql view model dbt_JKU.stg_query_history .......................... [RUN]
+[0m16:10:51.357458 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.snowflake_finops.stg_query_history'
+[0m16:10:51.357458 [debug] [Thread-2 (]: Began compiling node model.snowflake_finops.stg_query_history
+[0m16:10:51.365801 [debug] [Thread-2 (]: Writing injected SQL for node "model.snowflake_finops.stg_query_history"
+[0m16:10:51.366919 [debug] [Thread-2 (]: Began executing node model.snowflake_finops.stg_query_history
+[0m16:10:51.413351 [debug] [Thread-2 (]: Writing runtime sql for node "model.snowflake_finops.stg_query_history"
+[0m16:10:51.415415 [debug] [Thread-2 (]: Using snowflake connection "model.snowflake_finops.stg_query_history"
+[0m16:10:51.417182 [debug] [Thread-2 (]: On model.snowflake_finops.stg_query_history: create or replace   view FINOPS_DEV.dbt_JKU.stg_query_history
+  
+  
+  
+  
+  as (
+    
+
+with source as (
+    /* Extracting raw data from the Snowflake shared database */
+    select * from SNOWFLAKE.ACCOUNT_USAGE.query_history
+),
+
+renamed as (
+    select
+        query_id,
+        query_text,
+        database_name,
+        schema_name,
+        warehouse_name,
+        user_name,
+        role_name,
+        -- Normalize to lowercase to match the documentation and tests
+        lower(execution_status) as execution_status,
+        -- Convert milliseconds to seconds for better readability
+        (total_elapsed_time / 1000) as execution_time_s,
+        (compilation_time / 1000) as compilation_time_s,
+        -- Basic credit estimation (using cloud services credits as a proxy)
+        round(credits_used_cloud_services, 4) as credits_spent,
+        start_time,
+        end_time
+    from source
+    -- Development filter: Limit data to the last 30 days for performance
+    where start_time >= dateadd(day, -30, current_timestamp())
+)
+
+select * from renamed
+  )
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "model.snowflake_finops.stg_query_history"} */;
+[0m16:10:51.417182 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:10:52.984868 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.580 seconds
+[0m16:10:53.015885 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'daae23b0-588b-4983-92fa-128734ad7829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299347E4A70>]}
+[0m16:10:53.015885 [info ] [Thread-2 (]: 1 of 2 OK created sql view model dbt_JKU.stg_query_history ..................... [[32mSUCCESS 1[0m in 1.66s]
+[0m16:10:53.015885 [debug] [Thread-2 (]: Finished running node model.snowflake_finops.stg_query_history
+[0m16:10:53.015885 [debug] [Thread-4 (]: Began running node model.snowflake_finops.fct_daily_warehouse_costs
+[0m16:10:53.015885 [info ] [Thread-4 (]: 2 of 2 START sql table model dbt_JKU.fct_daily_warehouse_costs ................. [RUN]
+[0m16:10:53.015885 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.snowflake_finops.fct_daily_warehouse_costs'
+[0m16:10:53.015885 [debug] [Thread-4 (]: Began compiling node model.snowflake_finops.fct_daily_warehouse_costs
+[0m16:10:53.031507 [debug] [Thread-4 (]: Writing injected SQL for node "model.snowflake_finops.fct_daily_warehouse_costs"
+[0m16:10:53.031507 [debug] [Thread-4 (]: Began executing node model.snowflake_finops.fct_daily_warehouse_costs
+[0m16:10:53.047128 [debug] [Thread-4 (]: Writing runtime sql for node "model.snowflake_finops.fct_daily_warehouse_costs"
+[0m16:10:53.062750 [debug] [Thread-4 (]: Using snowflake connection "model.snowflake_finops.fct_daily_warehouse_costs"
+[0m16:10:53.062750 [debug] [Thread-4 (]: On model.snowflake_finops.fct_daily_warehouse_costs: create or replace transient table FINOPS_DEV.dbt_JKU.fct_daily_warehouse_costs
+    
+    
+    
+    as (
+
+with daily_metrics as (
+    /* 1. Aggregate staging data to a daily grain per warehouse */
+    select
+        date_trunc('day', start_time) as cost_date,
+        warehouse_name,
+        sum(credits_spent) as total_credits_spent
+    from FINOPS_DEV.dbt_JKU.stg_query_history
+    group by 1, 2
+),
+
+final as (
+    /* 2. Apply business logic and currency conversion */
+    select
+        -- Generate a unique ID for this grain (Date + Warehouse)
+        md5(cast(concat(coalesce(cast(cost_date as string), ''), '-', coalesce(cast(warehouse_name as string), '')) as string)) as daily_warehouse_id,
+        cost_date,
+        warehouse_name,
+        total_credits_spent,
+        -- Assumption: $3.00 per credit (Snowflake Standard pricing)
+        -- Calling our Jinja macro for the EUR conversion
+        
+    /* Generic macro to convert USD amounts to EUR.
+       Default rate is 0.92, but can be overridden during the call.
+    */
+    round(total_credits_spent * 3.00 * 0.92, 2)
+ as cost_eur
+    from daily_metrics
+)
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "model.snowflake_finops.fct_daily_warehouse_costs"} */;
+[0m16:10:53.062750 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:11:03.679652 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 10.613 seconds
+[0m16:11:03.679652 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'daae23b0-588b-4983-92fa-128734ad7829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002993BC73AA0>]}
+[0m16:11:03.679652 [info ] [Thread-4 (]: 2 of 2 OK created sql table model dbt_JKU.fct_daily_warehouse_costs ............ [[32mSUCCESS 1[0m in 10.66s]
+[0m16:11:03.679652 [debug] [Thread-4 (]: Finished running node model.snowflake_finops.fct_daily_warehouse_costs
+[0m16:11:03.679652 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:11:03.679652 [debug] [MainThread]: Connection 'list_FINOPS_DEV' was left open.
+[0m16:11:03.679652 [debug] [MainThread]: On list_FINOPS_DEV: Close
+[0m16:11:04.080475 [debug] [MainThread]: Connection 'list_FINOPS_DEV_dbt_JKU' was left open.
+[0m16:11:04.080475 [debug] [MainThread]: On list_FINOPS_DEV_dbt_JKU: Close
+[0m16:11:04.516051 [debug] [MainThread]: Connection 'model.snowflake_finops.stg_query_history' was left open.
+[0m16:11:04.516051 [debug] [MainThread]: On model.snowflake_finops.stg_query_history: Close
+[0m16:11:04.932750 [debug] [MainThread]: Connection 'model.snowflake_finops.fct_daily_warehouse_costs' was left open.
+[0m16:11:04.932750 [debug] [MainThread]: On model.snowflake_finops.fct_daily_warehouse_costs: Close
+[0m16:11:05.366281 [info ] [MainThread]: 
+[0m16:11:05.366281 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 16.49 seconds (16.49s).
+[0m16:11:05.366281 [debug] [MainThread]: Command end result
+[0m16:11:05.381903 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\manifest.json
+[0m16:11:05.398953 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\semantic_manifest.json
+[0m16:11:05.404782 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\run_results.json
+[0m16:11:05.405484 [info ] [MainThread]: 
+[0m16:11:05.405484 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:11:05.407139 [info ] [MainThread]: 
+[0m16:11:05.407139 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m16:11:05.408145 [debug] [MainThread]: Command `dbt run` succeeded at 16:11:05.408145 after 18.61 seconds
+[0m16:11:05.409133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029937937D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002993BB5BBC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029936DA89E0>]}
+[0m16:11:05.409133 [debug] [MainThread]: Flushing usage events
+[0m16:11:06.119809 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:11:27.341280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216BFACECF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C2BB3EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C2BB3F20>]}
+
+
+============================== 16:11:27.341280 | 257d4bad-6f0c-4185-8b15-d4bd08178095 ==============================
+[0m16:11:27.341280 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:11:27.341280 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\jksch\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt build', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\jksch\\Documents\\Projects\\dbt_projects\\dbt_snowflake\\snowflake-finops-ae\\logs'}
+[0m16:11:27.704069 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m16:11:27.704069 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m16:11:27.704069 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m16:11:27.954011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '257d4bad-6f0c-4185-8b15-d4bd08178095', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C5162960>]}
+[0m16:11:28.047769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '257d4bad-6f0c-4185-8b15-d4bd08178095', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C57014C0>]}
+[0m16:11:28.047769 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m16:11:28.419142 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m16:11:28.575353 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:11:28.575353 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:11:28.575353 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:11:28.591005 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.snowflake_finops.intermediate
+[0m16:11:28.629239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '257d4bad-6f0c-4185-8b15-d4bd08178095', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C38FAF90>]}
+[0m16:11:28.712816 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\manifest.json
+[0m16:11:28.716836 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\semantic_manifest.json
+[0m16:11:28.750848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '257d4bad-6f0c-4185-8b15-d4bd08178095', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C5EBBE30>]}
+[0m16:11:28.750848 [info ] [MainThread]: Found 2 models, 6 data tests, 2 sources, 523 macros
+[0m16:11:28.766470 [info ] [MainThread]: 
+[0m16:11:28.766470 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:11:28.766470 [info ] [MainThread]: 
+[0m16:11:28.766470 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m16:11:28.766470 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINOPS_DEV'
+[0m16:11:28.944865 [debug] [ThreadPool]: Using snowflake connection "list_FINOPS_DEV"
+[0m16:11:28.944865 [debug] [ThreadPool]: On list_FINOPS_DEV: show terse schemas in database FINOPS_DEV
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "connection_name": "list_FINOPS_DEV"} */
+[0m16:11:28.944865 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:11:30.302758 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.369 seconds
+[0m16:11:30.320212 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINOPS_DEV_dbt_JKU'
+[0m16:11:30.330368 [debug] [ThreadPool]: Using snowflake connection "list_FINOPS_DEV_dbt_JKU"
+[0m16:11:30.330368 [debug] [ThreadPool]: On list_FINOPS_DEV_dbt_JKU: show objects in FINOPS_DEV.dbt_JKU
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "connection_name": "list_FINOPS_DEV_dbt_JKU"} */;
+[0m16:11:30.330368 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:11:31.654830 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.333 seconds
+[0m16:11:31.654830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '257d4bad-6f0c-4185-8b15-d4bd08178095', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C5AFF650>]}
+[0m16:11:31.654830 [debug] [Thread-2 (]: Began running node model.snowflake_finops.stg_query_history
+[0m16:11:31.670207 [info ] [Thread-2 (]: 1 of 8 START sql view model dbt_JKU.stg_query_history .......................... [RUN]
+[0m16:11:31.670207 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.snowflake_finops.stg_query_history'
+[0m16:11:31.670207 [debug] [Thread-2 (]: Began compiling node model.snowflake_finops.stg_query_history
+[0m16:11:31.670207 [debug] [Thread-2 (]: Writing injected SQL for node "model.snowflake_finops.stg_query_history"
+[0m16:11:31.670207 [debug] [Thread-2 (]: Began executing node model.snowflake_finops.stg_query_history
+[0m16:11:31.717042 [debug] [Thread-2 (]: Writing runtime sql for node "model.snowflake_finops.stg_query_history"
+[0m16:11:31.719014 [debug] [Thread-2 (]: Using snowflake connection "model.snowflake_finops.stg_query_history"
+[0m16:11:31.719014 [debug] [Thread-2 (]: On model.snowflake_finops.stg_query_history: create or replace   view FINOPS_DEV.dbt_JKU.stg_query_history
+  
+  
+  
+  
+  as (
+    
+
+with source as (
+    /* Extracting raw data from the Snowflake shared database */
+    select * from SNOWFLAKE.ACCOUNT_USAGE.query_history
+),
+
+renamed as (
+    select
+        query_id,
+        query_text,
+        database_name,
+        schema_name,
+        warehouse_name,
+        user_name,
+        role_name,
+        -- Normalize to lowercase to match the documentation and tests
+        lower(execution_status) as execution_status,
+        -- Convert milliseconds to seconds for better readability
+        (total_elapsed_time / 1000) as execution_time_s,
+        (compilation_time / 1000) as compilation_time_s,
+        -- Basic credit estimation (using cloud services credits as a proxy)
+        round(credits_used_cloud_services, 4) as credits_spent,
+        start_time,
+        end_time
+    from source
+    -- Development filter: Limit data to the last 30 days for performance
+    where start_time >= dateadd(day, -30, current_timestamp())
+)
+
+select * from renamed
+  )
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "model.snowflake_finops.stg_query_history"} */;
+[0m16:11:31.720037 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:11:33.413273 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.699 seconds
+[0m16:11:33.440746 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '257d4bad-6f0c-4185-8b15-d4bd08178095', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C5CCCAA0>]}
+[0m16:11:33.441767 [info ] [Thread-2 (]: 1 of 8 OK created sql view model dbt_JKU.stg_query_history ..................... [[32mSUCCESS 1[0m in 1.76s]
+[0m16:11:33.441767 [debug] [Thread-2 (]: Finished running node model.snowflake_finops.stg_query_history
+[0m16:11:33.441767 [debug] [Thread-4 (]: Began running node test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c
+[0m16:11:33.441767 [debug] [Thread-5 (]: Began running node test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b
+[0m16:11:33.441767 [debug] [Thread-3 (]: Began running node test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82
+[0m16:11:33.441767 [info ] [Thread-4 (]: 2 of 8 START test accepted_values_stg_query_history_execution_status__success__fail__incident  [RUN]
+[0m16:11:33.441767 [info ] [Thread-5 (]: 3 of 8 START test not_null_stg_query_history_query_id .......................... [RUN]
+[0m16:11:33.441767 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c'
+[0m16:11:33.441767 [info ] [Thread-3 (]: 4 of 8 START test unique_stg_query_history_query_id ............................ [RUN]
+[0m16:11:33.441767 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b'
+[0m16:11:33.447661 [debug] [Thread-4 (]: Began compiling node test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c
+[0m16:11:33.447661 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82'
+[0m16:11:33.448530 [debug] [Thread-5 (]: Began compiling node test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b
+[0m16:11:33.457428 [debug] [Thread-3 (]: Began compiling node test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82
+[0m16:11:33.464698 [debug] [Thread-4 (]: Writing injected SQL for node "test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c"
+[0m16:11:33.470852 [debug] [Thread-5 (]: Writing injected SQL for node "test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b"
+[0m16:11:33.476340 [debug] [Thread-3 (]: Writing injected SQL for node "test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82"
+[0m16:11:33.476340 [debug] [Thread-5 (]: Began executing node test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b
+[0m16:11:33.476340 [debug] [Thread-3 (]: Began executing node test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82
+[0m16:11:33.476340 [debug] [Thread-4 (]: Began executing node test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c
+[0m16:11:33.496674 [debug] [Thread-5 (]: Writing runtime sql for node "test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b"
+[0m16:11:33.496674 [debug] [Thread-3 (]: Writing runtime sql for node "test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82"
+[0m16:11:33.496674 [debug] [Thread-4 (]: Writing runtime sql for node "test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c"
+[0m16:11:33.503679 [debug] [Thread-5 (]: Using snowflake connection "test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b"
+[0m16:11:33.503679 [debug] [Thread-3 (]: Using snowflake connection "test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82"
+[0m16:11:33.503679 [debug] [Thread-5 (]: On test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select query_id
+from FINOPS_DEV.dbt_JKU.stg_query_history
+where query_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b"} */
+[0m16:11:33.503679 [debug] [Thread-4 (]: Using snowflake connection "test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c"
+[0m16:11:33.503679 [debug] [Thread-3 (]: On test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    query_id as unique_field,
+    count(*) as n_records
+
+from FINOPS_DEV.dbt_JKU.stg_query_history
+where query_id is not null
+group by query_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82"} */
+[0m16:11:33.503679 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m16:11:33.503679 [debug] [Thread-4 (]: On test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        execution_status as value_field,
+        count(*) as n_records
+
+    from FINOPS_DEV.dbt_JKU.stg_query_history
+    group by execution_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'success','fail','incident'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c"} */
+[0m16:11:33.503679 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:11:33.503679 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:11:39.217660 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 5.714 seconds
+[0m16:11:39.217660 [info ] [Thread-5 (]: 3 of 8 PASS not_null_stg_query_history_query_id ................................ [[32mPASS[0m in 5.78s]
+[0m16:11:39.217660 [debug] [Thread-5 (]: Finished running node test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b
+[0m16:11:40.481460 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 6.972 seconds
+[0m16:11:40.483493 [info ] [Thread-3 (]: 4 of 8 PASS unique_stg_query_history_query_id .................................. [[32mPASS[0m in 7.04s]
+[0m16:11:40.484491 [debug] [Thread-3 (]: Finished running node test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82
+[0m16:11:41.070179 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 7.561 seconds
+[0m16:11:41.072583 [info ] [Thread-4 (]: 2 of 8 PASS accepted_values_stg_query_history_execution_status__success__fail__incident  [[32mPASS[0m in 7.63s]
+[0m16:11:41.072583 [debug] [Thread-4 (]: Finished running node test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c
+[0m16:11:41.073579 [debug] [Thread-2 (]: Began running node model.snowflake_finops.fct_daily_warehouse_costs
+[0m16:11:41.073579 [info ] [Thread-2 (]: 5 of 8 START sql table model dbt_JKU.fct_daily_warehouse_costs ................. [RUN]
+[0m16:11:41.074576 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.snowflake_finops.stg_query_history, now model.snowflake_finops.fct_daily_warehouse_costs)
+[0m16:11:41.075602 [debug] [Thread-2 (]: Began compiling node model.snowflake_finops.fct_daily_warehouse_costs
+[0m16:11:41.080134 [debug] [Thread-2 (]: Writing injected SQL for node "model.snowflake_finops.fct_daily_warehouse_costs"
+[0m16:11:41.082123 [debug] [Thread-2 (]: Began executing node model.snowflake_finops.fct_daily_warehouse_costs
+[0m16:11:41.111042 [debug] [Thread-2 (]: Writing runtime sql for node "model.snowflake_finops.fct_daily_warehouse_costs"
+[0m16:11:41.113062 [debug] [Thread-2 (]: Using snowflake connection "model.snowflake_finops.fct_daily_warehouse_costs"
+[0m16:11:41.113062 [debug] [Thread-2 (]: On model.snowflake_finops.fct_daily_warehouse_costs: create or replace transient table FINOPS_DEV.dbt_JKU.fct_daily_warehouse_costs
+    
+    
+    
+    as (
+
+with daily_metrics as (
+    /* 1. Aggregate staging data to a daily grain per warehouse */
+    select
+        date_trunc('day', start_time) as cost_date,
+        warehouse_name,
+        sum(credits_spent) as total_credits_spent
+    from FINOPS_DEV.dbt_JKU.stg_query_history
+    group by 1, 2
+),
+
+final as (
+    /* 2. Apply business logic and currency conversion */
+    select
+        -- Generate a unique ID for this grain (Date + Warehouse)
+        md5(cast(concat(coalesce(cast(cost_date as string), ''), '-', coalesce(cast(warehouse_name as string), '')) as string)) as daily_warehouse_id,
+        cost_date,
+        warehouse_name,
+        total_credits_spent,
+        -- Assumption: $3.00 per credit (Snowflake Standard pricing)
+        -- Calling our Jinja macro for the EUR conversion
+        
+    /* Generic macro to convert USD amounts to EUR.
+       Default rate is 0.92, but can be overridden during the call.
+    */
+    round(total_credits_spent * 3.00 * 0.92, 2)
+ as cost_eur
+    from daily_metrics
+)
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "model.snowflake_finops.fct_daily_warehouse_costs"} */;
+[0m16:11:48.074047 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 6.971 seconds
+[0m16:11:48.074047 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '257d4bad-6f0c-4185-8b15-d4bd08178095', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C79D3EF0>]}
+[0m16:11:48.074047 [info ] [Thread-2 (]: 5 of 8 OK created sql table model dbt_JKU.fct_daily_warehouse_costs ............ [[32mSUCCESS 1[0m in 7.00s]
+[0m16:11:48.074047 [debug] [Thread-2 (]: Finished running node model.snowflake_finops.fct_daily_warehouse_costs
+[0m16:11:48.074047 [debug] [Thread-3 (]: Began running node test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00
+[0m16:11:48.074047 [debug] [Thread-4 (]: Began running node test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc
+[0m16:11:48.074047 [debug] [Thread-5 (]: Began running node test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d
+[0m16:11:48.074047 [info ] [Thread-3 (]: 6 of 8 START test not_null_fct_daily_warehouse_costs_cost_eur .................. [RUN]
+[0m16:11:48.089401 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.snowflake_finops.unique_stg_query_history_query_id.74ccf61b82, now test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00)
+[0m16:11:48.074047 [info ] [Thread-4 (]: 7 of 8 START test not_null_fct_daily_warehouse_costs_daily_warehouse_id ........ [RUN]
+[0m16:11:48.089401 [debug] [Thread-3 (]: Began compiling node test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00
+[0m16:11:48.089401 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.snowflake_finops.accepted_values_stg_query_history_execution_status__success__fail__incident.895a03b21c, now test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc)
+[0m16:11:48.089401 [info ] [Thread-5 (]: 8 of 8 START test unique_fct_daily_warehouse_costs_daily_warehouse_id .......... [RUN]
+[0m16:11:48.089401 [debug] [Thread-3 (]: Writing injected SQL for node "test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00"
+[0m16:11:48.089401 [debug] [Thread-4 (]: Began compiling node test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc
+[0m16:11:48.089401 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.snowflake_finops.not_null_stg_query_history_query_id.a5f2833a4b, now test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d)
+[0m16:11:48.089401 [debug] [Thread-4 (]: Writing injected SQL for node "test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc"
+[0m16:11:48.089401 [debug] [Thread-5 (]: Began compiling node test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d
+[0m16:11:48.089401 [debug] [Thread-5 (]: Writing injected SQL for node "test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d"
+[0m16:11:48.089401 [debug] [Thread-3 (]: Began executing node test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00
+[0m16:11:48.105020 [debug] [Thread-3 (]: Writing runtime sql for node "test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00"
+[0m16:11:48.105020 [debug] [Thread-4 (]: Began executing node test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc
+[0m16:11:48.105020 [debug] [Thread-4 (]: Writing runtime sql for node "test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc"
+[0m16:11:48.105020 [debug] [Thread-5 (]: Began executing node test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d
+[0m16:11:48.105020 [debug] [Thread-3 (]: Using snowflake connection "test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00"
+[0m16:11:48.105020 [debug] [Thread-5 (]: Writing runtime sql for node "test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d"
+[0m16:11:48.116347 [debug] [Thread-3 (]: On test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cost_eur
+from FINOPS_DEV.dbt_JKU.fct_daily_warehouse_costs
+where cost_eur is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00"} */
+[0m16:11:48.118233 [debug] [Thread-4 (]: Using snowflake connection "test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc"
+[0m16:11:48.118745 [debug] [Thread-4 (]: On test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select daily_warehouse_id
+from FINOPS_DEV.dbt_JKU.fct_daily_warehouse_costs
+where daily_warehouse_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc"} */
+[0m16:11:48.120341 [debug] [Thread-5 (]: Using snowflake connection "test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d"
+[0m16:11:48.121107 [debug] [Thread-5 (]: On test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    daily_warehouse_id as unique_field,
+    count(*) as n_records
+
+from FINOPS_DEV.dbt_JKU.fct_daily_warehouse_costs
+where daily_warehouse_id is not null
+group by daily_warehouse_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "snowflake_finops", "target_name": "dev", "node_id": "test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d"} */
+[0m16:11:48.491998 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.384 seconds
+[0m16:11:48.491998 [info ] [Thread-3 (]: 6 of 8 PASS not_null_fct_daily_warehouse_costs_cost_eur ........................ [[32mPASS[0m in 0.40s]
+[0m16:11:48.491998 [debug] [Thread-3 (]: Finished running node test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00
+[0m16:11:48.581338 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.470 seconds
+[0m16:11:48.581338 [info ] [Thread-4 (]: 7 of 8 PASS not_null_fct_daily_warehouse_costs_daily_warehouse_id .............. [[32mPASS[0m in 0.49s]
+[0m16:11:48.581338 [debug] [Thread-4 (]: Finished running node test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc
+[0m16:11:48.601431 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.479 seconds
+[0m16:11:48.603452 [info ] [Thread-5 (]: 8 of 8 PASS unique_fct_daily_warehouse_costs_daily_warehouse_id ................ [[32mPASS[0m in 0.51s]
+[0m16:11:48.604423 [debug] [Thread-5 (]: Finished running node test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d
+[0m16:11:48.605324 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:11:48.605324 [debug] [MainThread]: Connection 'list_FINOPS_DEV' was left open.
+[0m16:11:48.605324 [debug] [MainThread]: On list_FINOPS_DEV: Close
+[0m16:11:48.979750 [debug] [MainThread]: Connection 'list_FINOPS_DEV_dbt_JKU' was left open.
+[0m16:11:48.979750 [debug] [MainThread]: On list_FINOPS_DEV_dbt_JKU: Close
+[0m16:11:49.380134 [debug] [MainThread]: Connection 'model.snowflake_finops.fct_daily_warehouse_costs' was left open.
+[0m16:11:49.380134 [debug] [MainThread]: On model.snowflake_finops.fct_daily_warehouse_costs: Close
+[0m16:11:49.729464 [debug] [MainThread]: Connection 'test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc' was left open.
+[0m16:11:49.729464 [debug] [MainThread]: On test.snowflake_finops.not_null_fct_daily_warehouse_costs_daily_warehouse_id.88101eb6fc: Close
+[0m16:11:50.082425 [debug] [MainThread]: Connection 'test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d' was left open.
+[0m16:11:50.082425 [debug] [MainThread]: On test.snowflake_finops.unique_fct_daily_warehouse_costs_daily_warehouse_id.b24a45761d: Close
+[0m16:11:50.453639 [debug] [MainThread]: Connection 'test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00' was left open.
+[0m16:11:50.453639 [debug] [MainThread]: On test.snowflake_finops.not_null_fct_daily_warehouse_costs_cost_eur.0d84d65f00: Close
+[0m16:11:50.812686 [info ] [MainThread]: 
+[0m16:11:50.812686 [info ] [MainThread]: Finished running 1 table model, 6 data tests, 1 view model in 0 hours 0 minutes and 22.05 seconds (22.05s).
+[0m16:11:50.812686 [debug] [MainThread]: Command end result
+[0m16:11:50.840215 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\manifest.json
+[0m16:11:50.846118 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\semantic_manifest.json
+[0m16:11:50.854119 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\jksch\Documents\Projects\dbt_projects\dbt_snowflake\snowflake-finops-ae\target\run_results.json
+[0m16:11:50.854119 [info ] [MainThread]: 
+[0m16:11:50.855116 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:11:50.855116 [info ] [MainThread]: 
+[0m16:11:50.856127 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=8
+[0m16:11:50.857111 [debug] [MainThread]: Command `dbt build` succeeded at 16:11:50.857111 after 23.64 seconds
+[0m16:11:50.857111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216BFACECF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C32AC350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C32AE780>]}
+[0m16:11:50.858108 [debug] [MainThread]: Flushing usage events
+[0m16:11:51.554189 [debug] [MainThread]: An error was encountered while trying to flush usage events
