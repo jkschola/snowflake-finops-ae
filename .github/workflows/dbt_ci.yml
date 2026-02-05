@@ -1,0 +1,40 @@
+name: dbt_pull_request_ci
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run_dbt_ci:
+    runs-on: ubuntu-latest
+    
+    env:
+      # Secrets from GitHub Settings
+      DBT_ACCOUNT: ${{ secrets.DBT_ACCOUNT }}
+      DBT_PASSWORD: ${{ secrets.DBT_PASSWORD }}
+      # Project Constants
+      DBT_USER: FINOPS_DBT_USER
+      DBT_ROLE: FINOPS_TRANSFORMER_ROLE
+      DBT_DATABASE: FINOPS_DEV
+      DBT_WAREHOUSE: FINOPS_WH
+      DBT_SCHEMA: "CI_PR_${{ github.event.pull_request.number }}"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          pip install dbt-snowflake
+          dbt deps
+
+      - name: dbt Debug (Verify Connection)
+        run: dbt debug --project-dir .
+
+      - name: dbt Build (Run & Test)
+        run: dbt build --project-dir .
