@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_query_history
+    description: "Cleaned and typed view of Snowflake query history logs."
+    columns:
+      - name: query_id
+        description: "Primary key for the query log."
+        tests:
+          - unique
+          - not_null
+      - name: execution_status
+        description: "Final status of the query execution."
+        tests:
+          - accepted_values:
+              # This is the new nested syntax required by dbt 1.9+
+              arguments:
+              # Updated to match Snowflake's official documentation on query execution status values
+                values: ['success', 'fail', 'incident']
