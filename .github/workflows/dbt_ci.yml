@@ -33,8 +33,9 @@ jobs:
           pip install dbt-snowflake
           dbt deps
 
+# NOTICE: Added "--profiles-dir ." to the commands below to ensure dbt uses the profiles.yml in the repository, which is configured for CI with environment variables.
       - name: dbt Debug (Verify Connection)
-        run: dbt debug --project-dir .
+        run: dbt debug --project-dir . --profiles-dir .
 
       - name: dbt Build (Run & Test)
-        run: dbt build --project-dir .
+        run: dbt build --project-dir . --profiles-dir .
