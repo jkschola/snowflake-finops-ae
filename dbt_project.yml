@@ -6,7 +6,7 @@ name: 'snowflake_finops'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'snowflake_finops'
+profile: 'snowflake_finops' # <--- Doit être identique au nom dans profiles.yml
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
