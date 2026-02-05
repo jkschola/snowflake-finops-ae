@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: snowflake_audit
+    database: SNOWFLAKE
+    schema: ACCOUNT_USAGE
+    loader: snowflake_builtin
+    description: "Raw Snowflake metadata for cost and usage auditing."
+    tables:
+      - name: query_history
+        description: "Execution logs for every SQL query in the account."
+      - name: warehouse_metering_history
+        description: "Hourly credit consumption per warehouse."
