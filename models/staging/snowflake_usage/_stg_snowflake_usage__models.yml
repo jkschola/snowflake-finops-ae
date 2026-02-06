@@ -14,6 +14,7 @@ models:
         tests:
           - accepted_values:
               # This is the new nested syntax required by dbt 1.9+
-              arguments:
+              # Remove "arguments:" and just use "values:" directly
+              #arguments:
               # Updated to match Snowflake's official documentation on query execution status values
-                values: ['success', 'fail', 'incident']
+              values: ['success', 'fail', 'incident']
