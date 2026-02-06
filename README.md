@@ -125,12 +125,12 @@ dbt build --profiles-dir .
 
 ## 📈 Database Schema
 
-    - Database: `FINOPS_DEV`
+- **Database:** `FINOPS_DEV`
 
-    - Key Model: `fct_daily_warehouse_costs` — Provides daily EUR spend per warehouse.
+- **Key Model:** `fct_daily_warehouse_costs` — Provides daily EUR spend per warehouse.
 
 ---
 
-Author: Schola Janvier
+**Author:** Schola Janvier
 
-Role: Analytics Engineer
+**Role:** *Analytics Engineer*
