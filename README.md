@@ -104,9 +104,9 @@ $env:DBT_PASSWORD = "your_secure_password"
 **Mac/Linux (Bash):**
 
 ```Bash
-# Set credentials for the current session
-$env:DBT_ACCOUNT = "your_org-your_account"
-$env:DBT_PASSWORD = "your_secure_password"
+# Export credentials for the current session
+export DBT_ACCOUNT="your_org-your_account"
+export DBT_PASSWORD="your_secure_password"
 ```
 
 ### 5. Verify and Build
